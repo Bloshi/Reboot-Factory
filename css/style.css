@@ -1,15 +1,22 @@
 /*woup-woup !*/
 
+*{
+	margin: 0;
+	padding: 0;
+}
 .container {
 	position: relative;
-	height: 480px;/*960*/
+	height: 460px;/*960*/
 	width: 320px;/*640*/
 	font-family: 'Quicksand', sans-serif; 
 
 }
 
 h1 {
-	color: #7693A0
+	color: #7693A0;
+	position:absolute;
+	top :60px;
+	left: 40px;
 }
 
 .fond{
@@ -22,19 +29,64 @@ h1 {
 }
 #username,#mdp {
 
-
+	position: absolute;
+	left: 31px; /*62*/
 	height: 57px;/*113*/
 	width: 258px;/*516*/
 	color: #7693A0;
 	font-size: 24px;/*47*/
 	font-family: 'Quicksand', sans-serif;
+	text-align: center;
 	border-color: #7693A0;
 	border-style:solid;
 	border-width:1px;/*2*/
 
 
 }
+#username{
+	bottom: 215px;/*431*/
+
+}
+#mdp {
+	bottom: 145px;/*290px*/
+
+}
+
+
+input[type=checkbox].css-checkbox {
+							  position: absolute; 
+							overflow: hidden; 
+							clip: rect(0 0 0 0); 
+							height:1px; 
+							width:1px; 
+							margin:-1px; 
+							padding:0;
+							border:0;
+						}
+
+						input[type=checkbox].css-checkbox + label.css-label {
+							padding-left:20px;
+							height:18px; 
+							display:inline-block;
+							line-height:15px;
+							background-repeat:no-repeat;
+							background-position: 0 0;
+							font-size:15px;
+							vertical-align:middle;
+							cursor:pointer;
+						}
+
+						input[type=checkbox].css-checkbox:checked + label.css-label {
+							background-position: 0 -18px;
+						}
+						
+						.css-label{
+							background:url(../images/checkbox.png);
+						}
 .info{
+	position: absolute;
+	bottom: 99px;/*198*/
+	left: 62px;/*124*/
 	height: 34px;/*67*/
 	width: 196px;/*392*/
 	text-align: center;
@@ -50,7 +102,12 @@ h1 {
 
 
 .ok {
+	position: absolute;
+	bottom: 20px;/*39*/
+	left: 120px;/*241*/
 	color: white;
+	display: inline-block;
+	text-decoration: none;
 	background-color: #7693A0;
 	border-color: white;
 	border-style:solid;
