@@ -1,0 +1,546 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+a {
+    color: #00e;
+}
+
+a:visited {
+    color: #551a8b;
+}
+
+a:hover {
+    color: #06e;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 403, ../scss/base/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 408, ../scss/base/_normalize.scss */
+ul, ol, li {
+  margin: 0;
+  list-style-type: none;
+  padding: 0; }
+
+/* line 414, ../scss/base/_normalize.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*
+Open Sans de Google
+On importe la font depuis Google pour avoir de système de CDN (Multiple serveurs dans le monde pour avoir 
+la font plus vite et ne pase dépendre que de son serveur
+*/
+/* line 9, ../scss/base/_fonts.scss */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 62.5%;
+  line-height: 1.4; }
+
+/* line 14, ../scss/base/_fonts.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Andada', serif; }
+
+/*
+Chargement des icons font, les icons font permettent d'utiliser des icones qui s'agrandissent comme des icones vectorielles
+de type SVG, sans perte de qualité et donc plus pratique que les background-image
+http://fontastic.me/app/ pour créer vos premières fonts
+*/
+@font-face {
+  font-family: "gesture-box";
+  src: url("../fonts/gesture-box/fonts/gesture-box.eot");
+  src: url("../fonts/gesture-box/fonts/gesture-box.eot?#iefix") format("embedded-opentype"), url("../fonts/gesture-box/fonts/gesture-box.woff") format("woff"), url("../fonts/gesture-box/fonts/gesture-box.ttf") format("truetype"), url("../fonts/gesture-box/fonts/gesture-box.svg#gesture-box") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* line 36, ../scss/base/_fonts.scss */
+[data-icon]:before {
+  font-family: "gesture-box" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* line 50, ../scss/base/_fonts.scss */
+[class^="gesture-"]:before,
+[class*=" gesture-"]:before {
+  font-family: "gesture-box" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* line 3, ../scss/element/_base.scss */
+.main .main--feed--article .main__feed__article--article {
+  padding: 1rem; }
+
+/* line 7, ../scss/element/_base.scss */
+.reveal--list .reveal__list--feed figure img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%; }
+
+/* line 11, ../scss/element/_base.scss */
+.main .main--feed--article, .main .main--feed--list, .dialog, .reveal {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+
+/* line 16, ../scss/element/_base.scss */
+.main, .main .main--feed--list .main__feed__list--element, .social li, [class|="button"] {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.15s;
+  -moz-transition-duration: 0.15s;
+  -o-transition-duration: 0.15s;
+  transition-duration: 0.15s; }
+
+/* line 21, ../scss/element/_base.scss */
+.noEvent {
+  pointer-events: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5; }
+
+/* line 26, ../scss/element/_base.scss */
+.fixedItem {
+  position: fixed;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+  pointer-events: none; }
+
+/* line 32, ../scss/element/_base.scss */
+[data-scrollable] {
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch; }
+
+/* line 1, ../scss/ui/_base.scss */
+body {
+  background-color: #1d1f28; }
+
+/* line 5, ../scss/ui/_base.scss */
+.left {
+  float: left; }
+
+/* line 9, ../scss/ui/_base.scss */
+.right {
+  float: right; }
+
+/* line 15, ../scss/ui/_base.scss */
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important; }
+
+/* line 1, ../scss/ui/_main.scss */
+.main {
+  width: 100%; }
+  .header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 44px;
+  background-color: #75929F;
+    z-index: 10; }
+
+
+    /*  HEADER  */
+  /* line 9, ../scss/ui/_header.scss */
+  .header .header--icon {
+    font-size: 2.4em;
+    line-height: 48px;
+    text-decoration: none;
+    padding: 0 .5rem;
+    color: #d2344f; }
+
+     header h1 {
+    width: 80px;
+    margin: 0px auto;
+    position: absolute;
+    left: 50%;
+    margin-left: -40px;
+    top: 8px;
+  }
+
+
+  /*  PAGE BRIEFING REMISE */ 
+
+  /* line 5, ../scss/ui/_main.scss */
+  .main .main--feed--article {
+    background-color: #fafafa;
+    position: fixed;
+    right: -100%;
+    width: 100%;
+    padding-top: 44px; }
+    /* line 12, ../scss/ui/_main.scss */
+    .main .main--feed--article.visible {
+      right: 0;
+      top: 0;
+      position: absolute;
+      z-index: 100; }
+    /* line 20, ../scss/ui/_main.scss */
+    .main .main--feed--article .main__feed__article--element .main__feed__article__element--image img {
+      width: 100%;
+      display: block;
+      vertical-align: top; }
+    /* line 29, ../scss/ui/_main.scss */
+    .main .main--feed--article .main__feed__article--article .main__feed__article__article--title {
+      margin-top: 0;
+      font-size: 2.5em;
+      margin-bottom: .3em; }
+    /* line 34, ../scss/ui/_main.scss */
+    .main .main--feed--article .main__feed__article--article .main__feed__article__article--summary {
+      font-size: 1.6em;
+      font-weight: 100; }
+
+
+
+
+      /*  PAGE LISTE REMISE */ 
+  /* line 41, ../scss/ui/_main.scss */
+  .main .main--feed--list {
+    background-color: #FFF;  /*#1d1f28*/
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding-top: 44px; }
+    /* line 48, ../scss/ui/_main.scss */
+    .main .main--feed--list.hide {
+      left: -20px;
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+      opacity: 0.2;
+      -webkit-transform: scale(0.95, 0.95);
+      -moz-transform: scale(0.95, 0.95);
+      -ms-transform: scale(0.95, 0.95);
+      -o-transform: scale(0.95, 0.95);
+      transform: scale(0.95, 0.95); }
+    /* line 53, ../scss/ui/_main.scss */
+    .main .main--feed--list .main__feed__list--element {
+     /* border-bottom: 1px solid #1d1f28;*/
+     border-bottom: 2px solid #75929F;
+      position: relative; }
+
+
+      .main .main--feed--list .main__feed__list--element h3 {
+      margin: 0;
+      padding: 0;
+      padding-left: 20px;
+      border-top: 4px solid #FFF;
+      border-bottom: 4px solid #FFF;
+      height: 70px;
+
+      font-size: 20px;
+      line-height: 40px;
+      color: #FFF;
+
+      background-color: #E5786C;
+      background-image: url(../img/plop.png);
+      background-position: 95% center;
+      background-size: 35px;
+      background-repeat: no-repeat;
+
+
+    }
+
+
+
+
+
+      /* line 57, ../scss/ui/_main.scss */
+      .main .main--feed--list .main__feed__list--element.readed {
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+        opacity: 0.5; }
+      /* line 61, ../scss/ui/_main.scss */
+      .main .main--feed--list .main__feed__list--element .main__feed__list__element--image img {
+        width: 100%;
+        vertical-align: top; }
+
+
+      .reboot-factory {
+        background: url("../img/bgApropos.png") no-repeat fixed left top / cover ; padding: 20px 60px;
+        background-color: #f33c17;
+      }
+
+
+
+
+
+
+
+        /* MENU */ 
+        /* line 1, ../scss/ui/_reveal.scss */
+.reveal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  background-color: #98BDD4;
+  z-index: 100; }
+  /* line 10, ../scss/ui/_reveal.scss */
+  .reveal .header {
+    background-color: #1f2130;
+    border-bottom-color: #292b40;
+    color: #fafafa; }
+    /* line 14, ../scss/ui/_reveal.scss */
+    .reveal .header .header--icon {
+      color: white; }
+  /* line 18, ../scss/ui/_reveal.scss */
+  .reveal.visible {
+    left: 0; }
+
+/* line 22, ../scss/ui/_reveal.scss */
+.reveal__content {
+  /*height: 505px;*/     /* _______*/
+  width: 100%;
+  position: absolute;
+  top: 44px;
+  background-color: #98BDD4; }
+
+/* line 31, ../scss/ui/_reveal.scss */
+.reveal--list .reveal__list--feed.selected {
+  background-color: #333550; }
+/* line 34, ../scss/ui/_reveal.scss */
+.reveal--list .reveal__list--feed figure {
+  width: 100%;
+  height: 60px;
+  padding: .5rem;
+  border-top: 1px solid #3d405f;
+  border-bottom: 1px solid #3d405f;
+  line-height: 40px; }
+  /* line 41, ../scss/ui/_reveal.scss */
+  .reveal--list .reveal__list--feed figure img {
+    float: left;
+    background-color: #FFF;
+    border: 1px solid #474a6f; }
+  /* line 47, ../scss/ui/_reveal.scss */
+  .reveal--list .reveal__list--feed figure figcaption {
+    padding-left: 50px;
+    color: #FFF;/*#e1e1e1*/
+    font-size: 1rem;
+    font-weight: 100; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/* Prevent callout */
+
+.nocallout {
+    -webkit-touch-callout: none;
+}
+
+.pressed {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* A hack for HTML5 contenteditable attribute on mobile */
+
+textarea[contenteditable] {
+    -webkit-appearance: none;
+}
+
+/* A workaround for S60 3.x and 5.0 devices which do not animated gif images if
+   they have been set as display: none */
+
+.gifhidden {
+    position: absolute;
+    left: -100%;
+}
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0;
+    direction: ltr;
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    text-indent: -999em;
+}
+
+.ir br {
+    display: none;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/**
+ * Clearfix helper
+ * Used to contain floats: h5bp.com/q
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 800px) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for viewports that meet the condition */
+}
