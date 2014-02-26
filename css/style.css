@@ -25,7 +25,7 @@ h1 {
 	z-index: -70;
 	height: 312px;/*624*/
 	width: 320px;/*640*/
-	background-color: #7693A0;
+	background-color: #98bdd4;
 }
 #username,#mdp {
 
@@ -37,7 +37,7 @@ h1 {
 	font-size: 24px;/*47*/
 	font-family: 'Quicksand', sans-serif;
 	text-align: center;
-	border-color: #7693A0;
+	border-color: #98bdd4;
 	border-style:solid;
 	border-width:1px;/*2*/
 
@@ -51,7 +51,10 @@ h1 {
 	bottom: 145px;/*290px*/
 
 }
-
+#page1{
+	position: absolute;
+	top: -81px;
+}
 
 input[type=checkbox].css-checkbox {
 							  position: absolute; 
@@ -91,10 +94,10 @@ input[type=checkbox].css-checkbox {
 	width: 196px;/*392*/
 	text-align: center;
 	line-height: 35px;/*70*/
-	color: #7693A0;
+	color: #98bdd4;
 	font-size: 16px;/*31*/
 	background-color: #F5F5F5;
-	border-color: #7693A0;
+	border-color: #98bdd4;
 	border-style:solid;
 	border-width:1px;/*2*/
 
@@ -108,7 +111,7 @@ input[type=checkbox].css-checkbox {
 	color: white;
 	display: inline-block;
 	text-decoration: none;
-	background-color: #7693A0;
+	background-color: #98bdd4;
 	border-color: white;
 	border-style:solid;
 	border-width:1px;/*2*/
